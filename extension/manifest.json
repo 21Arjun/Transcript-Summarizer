@@ -1,26 +1,16 @@
-{ 
-    "manifest_version": 3,
-    "name": "Youtube Summariser",
-    "description": "An extension to summarize youtube videos using the transcript",
+{
+    "name": "Youtube transcript summarizer",
     "version": "1.0",
-    "permissions": ["activeTab", "declarativeContent"],
-    "host_permissions": ["http://127.0.0.1:5000/*"],
-    
-    "action": {
-        "default_title": "Summarise this video",
-        "default_icon": {
-            "16": "icon.png",
-            "32": "icon.png",
-            "48": "icon.png",
-            "128": "icon.png"
-        },
+    "manifest_version": 2,
+    "description": "Youtube transcript summarizer",
+    "browser_action": {
         "default_popup": "popup.html"
     },
-
-    "icons": {
-        "16": "icon.png",
-        "32": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
-    }
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": ["<all_urls>",
+        "storage",
+        "tabs"
+    ]
 }
